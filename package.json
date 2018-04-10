@@ -2,7 +2,7 @@
   "name": "webpacklearn",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",//npm 指向的主要入口,故webpack默认找webpack.config.js
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=dev webpack-dev-server  --inline --hot --colors --progress --watch   --config webpack.development.config.js",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "babel-loader": "^7.1.4",
     "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.0.1",
@@ -24,5 +25,8 @@
     "url-loader": "^1.0.1",
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.3.1"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
   }
 }
