@@ -3,14 +3,16 @@
 }
 
 #cuteGirl{
+   display: inline-block;
    background: url('../image/1.jpg');
-   width: 300px;
-   height: 400px;
-   background-size: 300px 400px;
+   width: 100px;
+   height: 200px;
+   background-size: 100px 200px;
 }
 #cuteGirl2{
+   display: inline-block;
    background: url('../image/2.jpg');
-   width: 300px;
-   height: 400px;
-   background-size: 300px 400px;
+   width: 100px;
+   height: 200px;
+   background-size: 100px 200px;
 }

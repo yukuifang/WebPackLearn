@@ -8,6 +8,7 @@ module.exports = {
     entry:path.resolve(__dirname,'src/js/main.js'),   // app文件 src文件  index.js main.js app.js
     output:{
         path: path.resolve(__dirname,'dist/'),
+
         filename:'build.js'
     },
     module:{
@@ -42,7 +43,7 @@ module.exports = {
             //npm i url-loader file-loader --save-dev
             {
                 test: /\.(png|jpg|jpeg|gif)$/,
-                use: 'url-loader?limit=50000'
+                use: 'url-loader?limit=5000'
             },
         ]
     },
@@ -51,7 +52,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         //自动打开浏览器
         new OpenBrowserPlugin({  // npm i open-browser-webpack-plugin --save-dev
-            url: 'http://127.0.0.1:8086'
+            url: 'http://127.0.0.1:8089'
         }),
         // 根据指定的模版index.template.html，自动生成模版index.html以及打包的build.js和资源在内存缓存里面（看不到的），且自动注入<script type="text/javascript" src="build.js"></script>
         //改操作都在内存里面
@@ -71,7 +72,7 @@ module.exports = {
     },
     devServer:{
         host:'127.0.0.1',
-        port:8086,
+        port:8089,
         historyApiFallback:true, //不跳转
         hot:true,
         inline:true,//实时刷新,

@@ -6,9 +6,6 @@ var webpack=require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var OpenBrowserPlugin = require('open-browser-webpack-plugin')
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-
-
 module.exports = {
     entry:{
         app: path.resolve(__dirname,'src/js/main.js'),

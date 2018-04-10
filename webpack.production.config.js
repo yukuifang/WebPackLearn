@@ -16,7 +16,8 @@ module.exports = {
         vendor:Object.keys(pkg.dependencies)
     },
     output:{
-        path: __dirname + "/dist",
+        path: __dirname + "/dist/",
+        publicPath: "/",
         filename:'[name].[chunkhash:8].js'
 
     },
@@ -115,6 +116,13 @@ module.exports = {
     resolve:{
         //自动识别补全
         extensions:['.js','.css','.vue','.jsx','.less','.scss']
+    },
+    devServer:{
+        host:'127.0.0.1',
+        port:8086,
+        historyApiFallback:true, //不跳转
+        hot:true,
+        inline:true,//实时刷新,
     },
 
 }
