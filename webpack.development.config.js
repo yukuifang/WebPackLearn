@@ -28,17 +28,26 @@ module.exports = {
                 exclude:'/node_modules/'
             },
             // 处理在js中引用less文件:
-            // npm install less less-loader  -save-dev
+            // npm install less less-loader babel-preset-es2015 babel-plugin-transform-runtime  -save-dev
             {
                 test: /\.less$/,
                 use: ['style-loader', 'css-loader', 'less-loader'],
                 exclude:'/node_modules/'
             },
+            //将js文件中的es6语法转换为ES5语法
             {
                 test: /\.js$/,
                 use: ['babel-loader'],
                 exclude:'/node_modules/',
                 include:'/src/'
+            },
+
+            //npm i vue-loader  vue-hot-reload-api vue-html-loader vue-style-loader  vue-template-compiler babel-plugin-transform-runtime --save-dev
+            //npm i vue --save
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+
             },
             //npm i url-loader file-loader --save-dev
             {
@@ -47,6 +56,7 @@ module.exports = {
             },
         ]
     },
+
     plugins: [
         //热加载插件
         new webpack.HotModuleReplacementPlugin(),
@@ -77,5 +87,12 @@ module.exports = {
         hot:true,
         inline:true,//实时刷新,
     },
+    resolve: {
+        alias: {
+            'vue': 'vue/dist/vue.js'
+        }
+    }
+
+
 
 }

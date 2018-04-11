@@ -33,6 +33,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader', 'less-loader'],
                 exclude:'/node_modules/'
             },
+            //npm install babel-core  babel-loader -save-dev
             {
                 test: /\.js$/,
                 use: ['babel-loader'],
